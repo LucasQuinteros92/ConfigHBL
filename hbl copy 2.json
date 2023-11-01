@@ -1,0 +1,348 @@
+{
+     "reporte": {
+          "activado": 0,
+          "idNitro4": 2118,
+          "name": "HBL Serial DNI",
+          "client": "JPH Labo",
+          "lastUpdate": "2021/10/18 15:22:04",
+          "tiempoUpdate": 1,
+          "timeOutRequest": 5,
+          "encodeAutorization": "lions:Jph135",
+          "URLToken": "http://hbl.jphlions.com:3600/api/login-nitro4/",
+          "URLChequeoConfiguracion": "http://hbl.jphlions.com:3600/api/hbles/",
+          "URLReporteInicial": "http://hbl.jphlions.com:3600/api/hbles/",
+          "URLReporte": "http://hbl.jphlions.com:3600/api/hblstatuses/",
+          "versionFirmware": "",
+          "comandoBash": "",
+          "readLogs": 0,
+          "borrarTemp": 0,
+          "ejecutarComando": "1"
+     },
+     "wiegand": {
+          "port0": {
+               "activado": 1,
+               "esperaSenial": 0,
+               "bits": 0,
+               "pin": {
+                    "WD0": 23,
+                    "WD1": 24
+               },
+               "delayPulso": 8e-05,
+               "delayIntervalo": 0.00024,
+               "primerBit": 9,
+               "mascara": {
+                    "activada": 0,
+                    "valor": "0x3FFFFFFFF"
+               }
+          },
+          "port1": {
+               "activado": 1,
+               "esperaSenial": 0,
+               "bits": 0,
+               "pin": {
+                    "WD0": 23,
+                    "WD1": 24
+               },
+               "delayPulso": 5e-05,
+               "delayIntervalo": 0.002,
+               "primerBit": 1,
+               "mascara": {
+                    "activada": 0,
+                    "valor": "0x3FFFFFFFF"
+               }
+          },
+          "errorCode": 99999,
+          "URL": "http://rfid-test.jphlions.com/api/rfid",
+          "URL_timeOutRequest": 5,
+          "ID": "0001"
+     },
+     "digital": {
+          "in": {
+               "pushDelay": 500000,
+               "in1": {
+                    "activado": 0,
+                    "pin": 21,
+                    "id": "Entrada 1"
+               },
+               "in2": {
+                    "activado": 0,
+                    "pin": 20,
+                    "id": "Entrada 2"
+               }
+          },
+          "out": {
+               "activado": 1,
+               "tiempo": 1,
+               "logica": 1,
+               "pin": {
+                    "out1": 5,
+                    "out2": 6,
+                    "out3": 26,
+                    "out4": 16,
+                    "out5": 27,
+                    "out6": 17,
+                    "out7": 24,
+                    "out8": 23
+               }
+          },
+          "userLeds": {
+               "led1": {
+                    "pin": 13
+               },
+               "led2": {
+                    "pin": 19
+               },
+               "led3": {
+                    "pin": 12
+               },
+               "buzzer": {
+                    "pin": 18
+               }
+          }
+     },
+     "serial": {
+          "port": "/dev/ttyS0",
+          "baudrate": 9600,
+          "bytesize": 8,
+          "parity": "N",
+          "stopbits": 1,
+          "activado": 1
+     },
+     "hidDevices": {
+          "device1": {
+               "activado": 0,
+               "bufferSize": 20,
+               "timeout": 200,
+               "endpoint": "0x81",
+               "vendor_ID": "0xb6ce",
+               "product_ID": "0x0001"
+          },
+          "device2": {
+               "activado": 1,
+               "bufferSize": 20,
+               "timeout": 20000,
+               "endpoint": "0x81",
+               "vendor_ID": "0x05e0",
+               "product_ID": "0x1200"
+          },
+          "device3": {
+               "activado": 0,
+               "bufferSize": 20,
+               "timeout": 2000,
+               "endpoint": "0x81",
+               "vendor_ID": "0xffff",
+               "product_ID": "0x0035"
+          },
+          "device4": {
+               "activado": 1,
+               "bufferSize": 20,
+               "timeout": 200,
+               "endpoint": "0x84",
+               "vendor_ID": "0x0c2e",
+               "product_ID": "0x0be1"
+          }
+     },
+     "display": {
+          "display1": {
+               "activado": 0,
+               "width": 20,
+               "address": "0x27"
+          },
+          "display2": {
+               "activado": 0,
+               "width": 20,
+               "address": "0x26"
+          },
+          "display3": {
+               "activado": 0,
+               "width": 20,
+               "address": "0x25"
+          },
+          "display4": {
+               "activado": 0,
+               "width": 20,
+               "address": "0x24"
+          },
+          "display5": {
+               "activado": 0,
+               "width": 20,
+               "address": "0x23"
+          },
+          "display6": {
+               "activado": 0,
+               "width": 20,
+               "address": "0x22"
+          },
+          "display7": {
+               "activado": 0,
+               "width": 20,
+               "address": "0x21"
+          },
+          "display8": {
+               "activado": 0,
+               "width": 20,
+               "address": "0x20"
+          }
+     },
+     "tcp": {
+          "serverDefault": {
+               "ip": "172.16.3.40",
+               "port": 22490,
+               "activado": 0,
+               "bufferRX": 10,
+               "intentosConexion": 1
+          }
+     },
+     "http": {
+          "server": {
+               "activado": 1,
+               "port": 8000,
+               "reles": 8,
+               "respuesta": 0
+          }
+     },
+     "mock": {
+          "activado": 1,
+          "url": "http://localhost/MockTrueFalse/validar.php"
+     },
+     "request": {
+          "seleccionURL": 2,
+          "urlRequest1": "http://localhost/jphaccess/trp/alcoholemia.php?tarjeta=",
+          "urlRequest2": "http://localhost/jphaccess/trp/validar.php?tarjeta=",
+          "urlRequest3": "",
+          "urlRequest4": "",
+          "urlRequest5": "",
+          "urlError": "http://localhost/jphaccess/error.php",
+          "modoRequest": 2,
+          "timerActivado": 0,
+          "timeoutRequest": 10
+     },
+     "logs": {
+          "pathBackup": "/backupLog/",
+          "tamanioRotator": 1024768,
+          "hblCore": "hblCore.log",
+          "hblConexiones": "hblConexiones.log",
+          "hblWiegand": "hblWiegand.log",
+          "hblTcp": "hblTcp.log",
+          "hblEntradas": "hblEntradas.log",
+          "hblHTTP": "hblHTTP.log",
+          "hblReporte": "hblReporte.log",
+          "hblhidDevice": "hblhidDevice.log",
+          "hbli2c": "hbli2c.log",
+          "hblFTP": "hblFTP.log",
+          "hblRedundancia": "hblRedundancia.log",
+          "hblSerial": "hblSerial.log",
+          "hblCacheo": "hblCacheo.log"
+     },
+     "funcionamiento": {
+          "modo": 8
+     },
+     "hblCore": {
+          "hblDisplay": {
+               "activado": 0,
+               "modo": 1
+          },
+          "serialNumber": "92f6f398",
+          "revision": "00c03112",
+          "MAC_ethernet": "dc:a6:32:52:9b:92",
+          "NTP": "time.cloudflare.com",
+          "reset": {
+               "resetActivado": 0,
+               "tiempoReset": 14400
+          },
+          "tamper": {
+               "activado": 0
+          }
+     },
+     "network": {
+          "activado": 1,
+          "eth0": {
+               "activado": 1,
+               "dhcp": 0,
+               "static_ip_address": "192.168.1.1/24",
+               "static_routers": "192.168.1.1",
+               "metric": 0,
+               "netmask": "255.255.255.0",
+               "network": "192.168.1.0",
+               "broadcast": "192.168.1.255"
+          },
+          "wlan0": {
+               "activado": 0,
+               "dhcp": 1,
+               "static_ip_address": "192.168.1.1/24",
+               "static_routers": "192.168.1.1",
+               "ssid": "",
+               "password": "",
+               "metric": 201
+          },
+          "ppp0": {
+               "activado": 1,
+               "vendor_ID": "",
+               "product_ID": "",
+               "dialcommand": "ATDT",
+               "init1": "ATZ",
+               "init2": "",
+               "init3": "",
+               "init4": "AT+CGDCONT=1,'IP','igprs.claro.com.ar'",
+               "stupidmode": 1,
+               "ISDN": 0,
+               "modemType": "Analog Modem",
+               "askPassword": 0,
+               "phone": "*99#",
+               "username": "clarogprs",
+               "password": "clarogprs999",
+               "baud": 9600,
+               "newPPPD": 1,
+               "carrierCheck": 0,
+               "autoReconnect": 0,
+               "dialAttempts": 1,
+               "metric": 0
+          },
+          "testConexion": {
+               "activado": 1,
+               "url": "http://8.8.8.8",
+               "timeoutUrl": 8,
+               "timeDelay": 5,
+               "timeRepeat": 5,
+               "intentosConexion": 25,
+               "resetActivado": 0
+          },
+          "eth1": {
+               "activado": 0,
+               "dhcp": 1,
+               "static_ip_address": "192.168.1.1/24",
+               "static_routers": "192.168.1.1",
+               "netmask": "255.255.255.0",
+               "network": "192.168.1.0",
+               "broadcast": "192.168.1.255",
+               "metric": 200,
+               "vendor_ID": "0x2357",
+               "product_ID": "0x0600",
+               "timeDelay": 5
+          }
+     },
+     "ftp": {
+          "activado": 1,
+          "server": "servicios.jphlions.com",
+          "user": "jph",
+          "pass": "Jphlions135",
+          "directorio": "/usr/programas/hbl/ftp"
+     },
+     "redundancia": {
+          "primeraLetraUnidad": "a",
+          "ultimaLetraUnidad": "b",
+          "primeraParticion": "1",
+          "ultimaParticion": "2"
+     },
+     "debug": 1,
+     "versionHBL": "1.0",
+     "cacheo": {
+          "activado": 1,
+          "cantidadCacheos": 10,
+          "cacheosPositivos": 2,
+          "tiempoRelePositivo": 1,
+          "repRelePositivo": 2,
+          "tiempoReleNegativo": 1,
+          "repReleNegativo": 1
+     }
+}

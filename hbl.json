@@ -1,0 +1,395 @@
+{
+    "IDHBL": "3",
+    "funcionamiento": {
+        "modo": 2
+    },
+    "Tareas": {
+        "Tarea1": "",
+        "Tarea2": "",
+        "Tarea3": "",
+        "Tarea4": "",
+        "Tarea5": "",
+        "Tarea6": "",
+        "Tarea7": "",
+        "Tarea8": "",
+        "Tarea9": "",
+        "Tarea10": ""
+    },
+    "cacheo": {
+        "activado": 0,
+        "cantidadCacheos": 10,
+        "cacheosPositivos": 2,
+        "tiempoRelePositivo": 1,
+        "repRelePositivo": 2,
+        "tiempoReleNegativo": 1,
+        "repReleNegativo": 1
+    },
+    "kiosco": {
+        "activado": 0,
+        "URL": "http://172.16.23.27/kiosco/login.4.php",
+        "width": "1280",
+        "height": "1080"
+    },
+    "digital": {
+        "in": {
+            "pushDelay": 500000,
+            "in1": {
+                "activado": 1,
+                "logica": "NA",
+                "id": "IR1"
+            },
+            "in2": {
+                "activado": 1,
+                "logica": "NA",
+                "id": "IR2"
+            },
+            "in3": {
+                "activado": 0,
+                "logica": "NA",
+                "id": "Entrada 3"
+            },
+            "in4": {
+                "activado": 0,
+                "logica": "NA",
+                "id": "Entrada 4"
+            }
+        },
+        "out": {
+            "out1": {
+                "activado": 1,
+                "id": "Sirena",
+                "repeticion": 3,
+                "tiempo": 1
+            },
+            "out2": {
+                "activado": 0,
+                "id": "Barrera",
+                "repeticion": 1,
+                "tiempo": 1
+            },
+            "out3": {
+                "activado": 0,
+                "id": "Salida 3",
+                "repeticion": 3,
+                "tiempo": 1
+            },
+            "out4": {
+                "activado": 0,
+                "id": "Salida 4",
+                "repeticion": 3,
+                "tiempo": 1
+            }
+        }
+    },
+    "request": {
+        "activado": 0,
+        "seleccionURL": 3,
+        "urlRequest1": "http://localhost/jphaccess/trp/alcoholemia.php?tarjeta=",
+        "urlRequest2": "http://localhost/jphaccess/trp/validar.php?tarjeta=",
+        "urlRequest3": "http://172.16.23.27/workpass/login.hk.php",
+        "urlRequest4": "",
+        "urlRequest5": "",
+        "urlError": "http://localhost/jphaccess/error.php",
+        "timerActivado": 0,
+        "timeoutRequest": 10
+    },
+    "GenerarTXT": {
+        "activado": 0,
+        "path": "/home/pi/Desktop/Request.txt"
+    },
+    "network": {
+        "activado": 1,
+        "eth0": {
+            "activado": 1,
+            "dhcp": 1,
+            "static_ip_address": "192.168.0.10/24",
+            "static_routers": "192.168.0.1",
+            "gateway": "192.168.0.1",
+            "DNS": "172.19.201.17 172.19.201.18",
+            "metric": 0,
+            "netmask": "255.255.255.0",
+            "network": "",
+            "broadcast": ""
+        },
+        "wlan0": {
+            "activado": 1,
+            "hotspot": {
+                "activado": 1,
+                "ssid": "RPIHOTSPOT",
+                "wpa_passphrase": "Jphlions135"
+            },
+            "dhcp": 1,
+            "static_ip_address": "172.16.201.75/80",
+            "static_routers": "",
+            "gateway": "172.16.0.1",
+            "DNS": "172.19.201.17 172.19.201.18",
+            "netmask": "",
+            "network": "",
+            "broadcast": "",
+            "ssid": "RPIHOTSPOT",
+            "password": "Tecnica_labo",
+            "metric": 201
+        },
+        "ppp0": {
+            "activado": 0,
+            "vendor_ID": "",
+            "product_ID": "",
+            "dialcommand": "ATDT",
+            "init1": "ATZ",
+            "init2": "",
+            "init3": "",
+            "init4": "AT+CGDCONT=1,'IP','igprs.claro.com.ar'",
+            "stupidmode": 1,
+            "ISDN": 0,
+            "modemType": "Analog Modem",
+            "askPassword": 0,
+            "phone": "*99#",
+            "username": "clarogprs",
+            "password": "clarogprs999",
+            "baud": 9600,
+            "newPPPD": 1,
+            "carrierCheck": 0,
+            "autoReconnect": 0,
+            "dialAttempts": 1,
+            "metric": 0
+        },
+        "eth1": {
+            "activado": 0,
+            "dhcp": 1,
+            "static_ip_address": "192.168.1.1/24",
+            "static_routers": "192.168.1.1",
+            "gateway": "172.16.0.1",
+            "DNS": "172.19.201.17 172.19.201.18",
+            "netmask": "255.255.255.0",
+            "network": "192.168.1.0",
+            "broadcast": "192.168.1.255",
+            "metric": 200,
+            "vendor_ID": "0x2357",
+            "product_ID": "0x0600",
+            "timeDelay": 5
+        },
+        "testConexion": {
+            "activado": 1,
+            "url": "http://8.8.8.8",
+            "timeoutUrl": 8,
+            "timeDelay": 5,
+            "timeRepeat": 5,
+            "intentosConexion": 25,
+            "resetActivado": 0
+        }
+    },
+    "wiegand": {
+        "W1": {
+            "activado": 1,
+            "modo": "IN",
+            "esperaSenial": 0,
+            "bitsSalida": 0,
+            "delayPulso": 5e-05,
+            "delayIntervalo": 0.002,
+            "primerBit": 1
+        },
+        "W2": {
+            "activado": 1,
+            "modo": "OUT",
+            "esperaSenial": 0,
+            "bitsSalida": 0,
+            "delayPulso": 5e-06,
+            "delayIntervalo": 2e-05,
+            "primerBit": 9
+        }
+    },
+    "serial": {
+        "COM1": {
+            "activado": 1,
+            "port": "/dev/serial0",
+            "baudrate": 9600,
+            "bytesize": 8,
+            "parity": "N",
+            "stopbits": 1
+        },
+        "COM2": {
+            "activado": 0,
+            "port": "/dev/ttyAMA2",
+            "baudrate": 9600,
+            "bytesize": 8,
+            "parity": "N",
+            "stopbits": 1
+        }
+    },
+    "display": {
+        "activado": 0,
+        "line0": "OCUPACION",
+        "line1": "0",
+        "line2": "",
+        "line3": "PWC  Acceso Castelli",
+        "internet": {
+            "activado": 1,
+            "fila": 1,
+            "columna": 16
+        }
+    },
+    "MQTT": {
+        "activado": 0,
+        "broker": "broker.mqttdashboard.com",
+        "port": 1883,
+        "TopicSend": "JPH/Tx/CONTADOR/",
+        "TopicRecv": "JPH/Rx/CONTADOR/"
+    },
+    "tcp": {
+        "serverDefault": {
+            "activado": 0,
+            "ip": "192.168.1.100",
+            "port": 5005,
+            "intentosConexion": 10
+        }
+    },
+    "http": {
+        "server": {
+            "activado": 0,
+            "port": 8000,
+            "respuesta": 0
+        }
+    },
+    "ftp": {
+        "activado": 0,
+        "server": "servicios.jphlions.com",
+        "user": "jph",
+        "pass": "Jphlions135",
+        "directorio": "/usr/programas/hbl/ftp"
+    },
+    "logs": {
+        "pathBackup": "/backupLog/",
+        "tamanioRotator": 1024768,
+        "hblCore": "hblCore.log",
+        "hblConexiones": "hblConexiones.log",
+        "hblWiegand": "hblWiegand.log",
+        "hblTcp": "hblTcp.log",
+        "hblEntradas": "hblEntradas.log",
+        "hblHTTP": "hblHTTP.log",
+        "hblReporte": "hblReporte.log",
+        "hblhidDevice": "hblhidDevice.log",
+        "hbli2c": "hbli2c.log",
+        "hblFTP": "hblFTP.log",
+        "hblSerial": "hblSerial.log",
+        "hblCacheo": "hblCacheo.log",
+        "hblKiosco": "hblKiosco.log",
+        "hblTareas": "hblTareas.log",
+        "hblEsclusa": "hblEsclusa.log",
+        "hblMQTT": "hblMQTT.log",
+        "hblTimer": "hblTimer.log",
+        "hblPuerta": "hblPuerta.log",
+        "hblBioStar2_WebSocket": "hblBioStar2_WebSocket.log",
+        "hblMail": "hblMail.log",
+        "hblPruebaHBL": "hblPruebaHBL.log"
+    },
+    "reporte": {
+        "activado": 0,
+        "idNitro4": 2112,
+        "name": "",
+        "client": "",
+        "lastUpdate": "2021/09/20 16:53:14",
+        "tiempoUpdate": 1,
+        "timeOutRequest": 5,
+        "encodeAutorization": "lions:Jph135",
+        "URLToken": "http://hbl.jphlions.com:3600/api/login-nitro4/",
+        "URLChequeoConfiguracion": "http://hbl.jphlions.com:3600/api/hbles/",
+        "URLReporteInicial": "http://hbl.jphlions.com:3600/api/hbles/",
+        "URLReporte": "http://hbl.jphlions.com:3600/api/hblstatuses/"
+    },
+    "hidDevices": {
+        "device1": {
+            "nombre": "Teclado generico",
+            "activado": 0,
+            "bufferSize": 20,
+            "timeout": 200,
+            "endpoint": "0x81",
+            "vendor_ID": "0xb6ce",
+            "product_ID": "0x0001"
+        },
+        "device2": {
+            "nombre": "Lector DNI",
+            "activado": 0,
+            "bufferSize": 20,
+            "timeout": 20000,
+            "endpoint": "0x81",
+            "vendor_ID": "0x05e0",
+            "product_ID": "0x1200"
+        },
+        "device3": {
+            "nombre": "Lector ZK",
+            "activado": 0,
+            "bufferSize": 20,
+            "timeout": 2000,
+            "endpoint": "0x81",
+            "vendor_ID": "0xffff",
+            "product_ID": "0x0035"
+        },
+        "device4": {
+            "nombre": "Honeywell Imaging & Mobility 7580",
+            "activado": 0,
+            "bufferSize": 20,
+            "timeout": 200,
+            "endpoint": "0x84",
+            "vendor_ID": "0x0c2e",
+            "product_ID": "0x0be1"
+        }
+    },
+    "ActualizarGit": {
+        "Activado": 0
+    },
+    "Audio": {
+        "activado": 0,
+        "path": {
+            "Pasa": "/usr/programas/Audios/acceso-habilitado.mp3",
+            "NoPasa": "/usr/programas/Audios/acceso-denegado.mp3",
+            "ErrorDNI": ""
+        }
+    },
+    "ContadorPersonas": {
+        "activado": 0,
+        "tiempos": {
+            "SegundosParafichar": 10,
+            "LedPuertaAbiertaON": 0.5,
+            "LedIntrusoON": 1,
+            "MaxTimeLEDCicloCompleto": 1000,
+            "MaxTimePuertaAbierta": 720,
+            "MaxTimeAlarmaPuertaAbiertaActivada": 180,
+            "MaxTimeAlarmaPuertaAbiertaDesactivada": 420
+        },
+        "opciones": {
+            "MailPuertaAbierta": 1,
+            "DebugSensores": 0,
+            "Buzzer": 0
+        },
+        "credenciales": {
+            "ID": "PWC  Acceso Castelli",
+            "Red": "SECTOR1"
+        },
+        "IntentosConexion": 10,
+        "IntrusosPendientesPath": "Intrusos.txt",
+        "noreseth1": 600,
+        "noreseth2": 2000
+    },
+    "Mail": {
+        "activado": 0,
+        "destinatarios": [
+            "lqu@jphlions.com"
+        ],
+        "remitente": "rpi@jphlions.com",
+        "user": "lqu@jphlions.com",
+        "key": "KLfNzGbp9Zk7HtU3",
+        "subject": "Intruso detectado"
+    },
+    "BioStar2_WebSocket": {
+        "activado": 0,
+        "WebSocket_Host": "wss://172.16.23.25:443",
+        "Api_Host": "https://172.16.23.25",
+        "Tipo_Evento": [
+            "VERIFY_SUCCESS_CARD",
+            "IDENTIFY_SUCCESS_FINGERPRINT"
+        ],
+        "Device_ID": "539325963",
+        "BioStar2_User": "admin",
+        "BioStar2_Password": "Jphlions135"
+    }
+}
